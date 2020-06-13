@@ -1,0 +1,105 @@
+
+
+ @import './formPage.css';
+
+body{
+    background-color: whitesmoke;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+
+}
+
+main{
+    max-width: 100%;
+}
+
+a {
+
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: black;
+}
+
+li{
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-bottom: gray solid 1px;
+    border-radius: 4px;
+    box-shadow: gray;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+.pokeList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.ui.segment:first-child{
+    margin: 1rem 0 !important;
+}
+
+.pokeList > div {
+height: 178px;
+width: 178px;
+align-self: center;
+padding-bottom: 0;
+background-image: linear-gradient(#7D1827 5%, rgb(189, 59, 59) 49%, black 5%, white 49%, #CADBD1) !important;
+}
+
+.pokeLink{
+    display: flex;
+    flex-direction: column;
+}
+
+.collList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.collList > div{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-image: linear-gradient(#280b79 5%, rgb(110, 15, 173) 49%, black 5%, white 49%, #CADBD1) !important;
+}
+
+
+.collectionSprite{
+    align-self: flex-end;
+    justify-self: center;
+}
+
+
+.pokeTitleSpan{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokeName{
+    align-self: center;
+    padding-bottom: 15px;
+}
+
+.spriteName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+}
