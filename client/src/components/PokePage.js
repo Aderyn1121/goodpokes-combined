@@ -33,7 +33,6 @@ class PokePage extends Component {
                 return type.type.name;
             })
 
-            // console.log(typeNames);
 
             const abilityList = abilities.map((ability) => {
                 return ability.ability;
@@ -59,8 +58,6 @@ class PokePage extends Component {
                 spdef,
                 speed,
             })
-
-            // console.log(this.state)
 
         }
     }

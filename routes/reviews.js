@@ -9,7 +9,6 @@ const {
 
 const router = express.Router();
 
-router.use(requireAuth);
 
 const reviewValidators = check('content')
     .exists({ checkFalsy: true })
@@ -27,6 +26,7 @@ router.delete('/:id/delete', asyncHandler(async (req, res) => {
 router.put('/:id/edit',
     reviewValidators,
     handleValidationErrors,
+    requireAuth,
     asyncHandler(async (req, res) => {
         const reviewId = parseInt(req.params.id, 10);
         const review = await Review.findByPk(reviewId);
@@ -67,7 +67,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
 
 
 //create review
-router.post('/:id/:pokeId', reviewValidators, handleValidationErrors,
+router.post('/:id/:pokeId', requireAuth, reviewValidators, handleValidationErrors,
     asyncHandler(async (req, res) => {
         console.log(req.body)
         const posterId = parseInt(req.params.id, 10);

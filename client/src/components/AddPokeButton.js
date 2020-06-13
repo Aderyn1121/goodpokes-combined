@@ -68,7 +68,6 @@ class AddPokeButton extends Component {
     render() {
 
         if (!this.state.collection) return null;
-        // console.log(this.state.collection)
 
         if (this.state.collection.includes(this.state.name)) {
             return (

@@ -37,11 +37,7 @@ const validateUser = [
         .withMessage('Please provide a valid date for birthday'),
     check('password')
         .exists({ checkFalsy: true })
-        .withMessage('Please provide a value for Password')
-        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/, 'g')
-        .withMessage(
-            'Password must contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'
-        ),
+        .withMessage('Please provide a value for Password'),
     check('confirmPassword')
         .exists({ checkFalsy: true })
         .withMessage('Please provide a value for Confirm Password'),

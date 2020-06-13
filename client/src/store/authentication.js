@@ -40,7 +40,6 @@ export const signUp = (email, password, confirmPassword, userName, birthday, pro
         });
 
         if (!response.ok) {
-            console.log(response);
             const { errors } = await response.json();
             return errors;
         }
@@ -64,7 +63,6 @@ export const login = (email, password) => async dispatch => {
     });
 
     if (!response.ok) {
-        console.log(response);
         const { errors } = await response.json();
         return errors;
     }

@@ -14,13 +14,10 @@ const PokeList = ({ list, ...rest }) => (
 
 export const PokeListType = ({ list, ...rest }) => {
 
-    console.log(list)
-
     const flatterList = list.map(item => {
         return item.pokemon
     });
 
-    console.log(flatterList)
 
     return (
         <ul className="pokeList">

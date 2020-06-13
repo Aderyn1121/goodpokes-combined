@@ -27,8 +27,6 @@ class PokeDiv extends Component {
             list = await this.getPokemonDefault()
         }
 
-        // console.log(this.state.list);
-
         this.setState({
             listSegment: list.slice(this.state.offset, this.state.offset + 25)
         })
@@ -47,8 +45,6 @@ class PokeDiv extends Component {
 
             const list = await res.json()
             const parseList = list.pokemon
-
-            console.log(parseList);
 
             this.setState({
                 list: parseList,

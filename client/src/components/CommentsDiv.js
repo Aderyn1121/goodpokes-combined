@@ -16,7 +16,6 @@ class CommentsDiv extends Component {
 
     componentDidMount() {
         this.loadComments();
-        console.log(this.state.comments);
     }
 
     async loadComments() {
