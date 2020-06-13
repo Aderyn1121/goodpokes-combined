@@ -15,7 +15,7 @@ const reviewValidators = check('content')
     .withMessage('You cannot submit empty reviews.');
 
 //delete review
-router.delete('/:id/delete', asyncHandler(async (req, res) => {
+router.delete('/:id/delete', requireAuth, asyncHandler(async (req, res) => {
     const reviewId = parseInt(req.params.id, 10);
     const review = await Review.findByPk(reviewId);
     review.destroy();
@@ -26,7 +26,6 @@ router.delete('/:id/delete', asyncHandler(async (req, res) => {
 router.put('/:id/edit',
     reviewValidators,
     handleValidationErrors,
-    requireAuth,
     asyncHandler(async (req, res) => {
         const reviewId = parseInt(req.params.id, 10);
         const review = await Review.findByPk(reviewId);
@@ -67,7 +66,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
 
 
 //create review
-router.post('/:id/:pokeId', requireAuth, reviewValidators, handleValidationErrors,
+router.post('/:id/:pokeId', requireAuth, handleValidationErrors,
     asyncHandler(async (req, res) => {
         console.log(req.body)
         const posterId = parseInt(req.params.id, 10);
