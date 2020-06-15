@@ -26,6 +26,9 @@ app.use('/user', userRouter);
 app.use('/reviews', reviewRouter);
 app.use('/', authRouter);
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + './client/build/index.html'))
+})
 
 // Catch unhandled requests and forward to error handler.
 app.use((req, res, next) => {
