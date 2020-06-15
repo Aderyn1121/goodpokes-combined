@@ -119,7 +119,7 @@ class PokeDiv extends Component {
         if (!this.state.byType) {
             return (
                 <div>
-                    <nav className='18 fluid ui buttons'>
+                    <nav style={{ display: 'flex', flexWrap: 'wrap' }} className='18 fluid ui buttons'>
                         <button className='ui button green' id='bug' onClick={() => { this.handleType('bug') }}>BUG</button>
                         <button className='ui button purple' id='dark' onClick={() => { this.handleType('dark') }}>DARK</button>
                         <button className='ui button yellow' id='electric' onClick={() => { this.handleType('electric') }} >ELECTRIC</button>
@@ -160,7 +160,7 @@ class PokeDiv extends Component {
 
             return (
                 <div>
-                    <nav className='18 fluid ui buttons'>
+                    <nav style={{ display: 'flex', flexWrap: 'wrap' }} className='18 fluid ui buttons'>
                         <button className='ui button green' id='bug' onClick={() => { this.handleType('bug') }}>BUG</button>
                         <button className='ui button purple' id='dark' onClick={() => { this.handleType('dark') }}>DARK</button>
                         <button className='ui button yellow' id='electric' onClick={() => { this.handleType('electric') }} >ELECTRIC</button>
